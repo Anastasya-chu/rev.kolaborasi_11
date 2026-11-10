@@ -1,0 +1,489 @@
+/* ==Produk2== */
+
+:root {
+  --hijau-tua: #1b6b4f;
+  --hijau-judul: #285a3d;
+  --hijau-muda: #a8d5b5;
+  --garis: #86b497;
+  --kartu-bg: #dcf7e6;
+  --teks-isi: #3a4a40;
+
+  --font-logo: 'Lilita One', 'Arial Rounded MT Bold', sans-serif;
+  --font-isi: 'Poppins', Arial, sans-serif;
+  --font-serif: 'Times New Roman', Georgia, serif;
+}
+
+/* -- Reset dasar -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-isi);
+  background-color: #f0fbf5;
+  color: var(--navy);
+  line-height: 1.5;
+  padding-top: 80px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* == NAVBAR == */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 35%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  margin: 16px auto 0;
+  padding: 8px 18px;
+  background-color: var(--hijau-muda);
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.navbar-title {
+  font-family: var(--font-logo);
+  font-size: 22px;
+  color: var(--hijau-tua);
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  padding: 4px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--hijau-judul);
+  background-color: #f1f1f1;
+  border: 1px solid var(--hijau-judul);
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--hijau-judul);
+  color: #fff;
+}
+
+/* == HALAMAN == */
+.halaman {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 50px 70px;
+}
+
+/* == JUDUL HALAMAN == */
+.judul-utama {
+  font-family: var(--font-logo);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--hijau-judul);
+}
+
+.judul-sub {
+  margin-top: 2px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #5b8070;
+}
+
+.judul-garis {
+  width: 88%;
+  margin-top: 14px;
+  border: none;
+  border-top: 2px solid var(--garis);
+}
+
+/* == HERO PRODUK == */
+.produk-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px 0 36px 32px;
+}
+
+.produk-nama {
+  max-width: 300px;
+  font-family: var(--font-logo);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--hijau-judul);
+}
+
+.produk-foto {
+  width: 320px;
+  height: 282px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* == KARTU UMUM == */
+.kartu {
+  margin-bottom: 30px;
+  background-color: var(--kartu-bg);
+  border: 1.5px solid var(--garis);
+  border-radius: 30px;
+  box-shadow: 12px 16px 30px rgba(20, 70, 50, 0.22);
+}
+
+.kartu-judul {
+  font-family: var(--font-logo);
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--hijau-judul);
+}
+
+.kartu-judul-kiri {
+  text-align: left;
+}
+
+.kartu-garis {
+  margin: 4px 0 10px;
+  border: none;
+  border-top: 2px solid var(--garis);
+}
+
+/* -- Ulasan Produk -- */
+.kartu-ulasan {
+  padding: 18px 24px 22px;
+  border-color: transparent;
+}
+
+.kartu-ulasan .kartu-judul {
+  text-align: left;
+}
+
+.ulasan-teks {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--teks-isi);
+}
+
+/* -- Alat/Bahan & Biaya -- */
+.kartu-dua {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 24px 20px;
+}
+
+.kolom {
+  padding: 0 14px;
+}
+
+.kolom:first-child {
+  border-right: 2px solid var(--garis);
+}
+
+.kolom-judul {
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  font-family: var(--font-logo);
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--hijau-judul);
+  border-bottom: 2px solid var(--garis);
+}
+
+.daftar {
+  padding-left: 16px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--teks-isi);
+}
+
+.daftar li::before {
+  content: "\2022";
+  margin-right: 8px;
+}
+
+.daftar-rapat {
+  padding-left: 0;
+}
+
+.total {
+  margin-top: 6px;
+  padding: 4px 12px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--teks-isi);
+  background-color: #f4fcf7;
+  border-left: 4px solid #4f7d5f;
+  border-radius: 0 8px 8px 0;
+}
+
+/* == LANGKAH KERJA == */
+.langkah {
+  margin-bottom: 30px;
+  background-color: var(--kartu-bg);
+  border: 1.5px solid var(--garis);
+  border-radius: 999px;
+  box-shadow: 12px 16px 30px rgba(20, 70, 50, 0.22);
+}
+
+.langkah-judul {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 40px;
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-logo);
+  font-size: 20px;
+  color: var(--hijau-judul);
+}
+
+/* Segitiga panah kecil */
+.langkah-judul::-webkit-details-marker {
+  display: none;
+}
+
+.langkah-judul::before {
+  content:"";
+  border-left: 16px solid #3f7a4f;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  transition: transform 0.2s;
+}
+
+.langkah[open] {
+  border-radius: 30px;
+}
+
+.langkah[open] .langkah-judul::before {
+  transform: rotate(90deg);
+}
+
+.langkah-isi {
+  padding: 0 40px 22px 82px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--teks-isi);
+}
+
+/* == HARGA JUAL DAN LABA == */
+.kartu-laba {
+  padding: 18px 22px 22px;
+}
+
+.laba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.laba-box {
+  padding: 12px 14px 14px;
+  background-color: #f8fdfa;
+  border: 1.5px solid var(--garis);
+  border-radius: 14px;
+}
+
+.laba-label {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--teks-isi);
+}
+
+.laba-nilai {
+  margin-top: 8px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--teks-isi);
+}
+
+/* == FOOTER == */
+.footer {
+  padding: 36px 36px 12px;
+  background-color: #196d53;
+  color: #e3f5ea;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.2fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 44px;
+  background-color: #eef7f3;
+  border-radius: 10px;
+}
+
+.footer-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.footer-title {
+  margin-top: 8px;
+  font-family: var(--font-logo);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--hijau-muda);
+}
+
+.footer-desc {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #a8d5b5;
+}
+
+.btn-top {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--hijau-judul);
+  border: 1px solid #e3f5ea;
+  border-radius: 999px;
+}
+
+.btn-top:hover {
+  background-color: #fff;
+  color: var(--hijau-judul);
+}
+
+.footer-heading {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-menu li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-label {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-text {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.footer-copy {
+  max-width: 1000px;
+  margin: 28px auto 0;
+  padding-top: 8px;
+  font-size: 11px;
+  text-align: center;
+  border-top: 3px solid var(--hijau-judul);
+}
+
+/* == RESPONSIF == */
+@media (max-width: 760px) {
+  .halaman {
+    padding: 30px 20px 50px;
+  }
+  .judul-utama {
+    font-size: 38px;
+  }
+  .produk-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .produk-nama {
+    max-width: none;
+    font-size: 34px;
+  }
+  .produk-foto {
+    width: 100%;
+    height: 260px;
+  }
+  .laba-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .kartu-dua {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .kolom:first-child {
+    border-right: none;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--garis);
+  }
+  .langkah-isi {
+    padding: 0 24px 20px 56px;
+  }
+  .langkah-judul {
+    padding: 14px 24px;
+  }
+}
